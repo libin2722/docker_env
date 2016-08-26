@@ -31,7 +31,7 @@ COPY scripts/start.sh /opt/software/nginx/sbin/start.sh
 RUN chmod +x /opt/software/nginx/sbin/start.sh
 
 RUN mkdir -p /sslkeys && \
-    chmod -R a+w /sslkeys/*
+    chmod -R a+w /sslkeys
 
 #RUN mkdir -p /opt/tools
 #RUN mkdir -p /opt/software/nginx
