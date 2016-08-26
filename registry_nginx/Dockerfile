@@ -16,7 +16,7 @@ ADD aliyun-epel.repo /etc/yum.repos.d/epel.repo
 COPY nginx-1.8.1.tar.gz nginx-1.8.1.tar.gz
 
 RUN yum install -y gcc gcc-c++ make cmake autoconf automake && \
-    yum install -y pcre-devel zlib-devel openssl openssl-devel && \
+    yum install -y pcre-devel zlib-devel httpd openssl openssl-devel && \
     yum clean all
 
 RUN tar zxf nginx-1.8.1.tar.gz -C /usr/local/src/ && \
@@ -29,6 +29,9 @@ RUN tar zxf nginx-1.8.1.tar.gz -C /usr/local/src/ && \
 COPY scripts/start.sh /opt/software/nginx/sbin/start.sh
 
 RUN chmod +x /opt/software/nginx/sbin/start.sh
+
+RUN mkdir -p /sslkeys && \
+    chmod -R a+w /sslkeys/*
 
 #RUN mkdir -p /opt/tools
 #RUN mkdir -p /opt/software/nginx
