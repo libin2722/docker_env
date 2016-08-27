@@ -10,7 +10,7 @@ MAINTAINER Terry.Li,<libin2722@sohu.com>
 ADD aliyun-mirror.repo /etc/yum.repos.d/CentOS-Base.repo
 ADD aliyun-epel.repo /etc/yum.repos.d/epel.repo
 
-RUN echo "192.168.58.137 tomcat.terry.com" >> /etc/hosts
+#RUN echo "192.168.58.137 tomcat.terry.com" >> /etc/hosts
 
 RUN yum install -y nginx vim
 
