@@ -12,7 +12,7 @@ ENV TOMCAT_MINOR_VERSION 9.0.0.M9
 ENV CATALINA_HOME /opt/tomcat
 ENV APP_DIR ${CATALINA_HOME}/webapps/
 
-ADD docker.repo /etc/yum.repos.d/docker.repo 
+#ADD docker.repo /etc/yum.repos.d/docker.repo 
 
 COPY apache-tomcat-${TOMCAT_MINOR_VERSION}.tar.gz /tmp/apache-tomcat-${TOMCAT_MINOR_VERSION}.tar.gz
 
